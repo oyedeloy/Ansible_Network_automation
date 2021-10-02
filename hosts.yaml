@@ -1,0 +1,23 @@
+---
+datacenter:
+  children:
+    routers:
+      hosts:
+        10.30.10.3[0-3]:  
+      vars:
+        testVars: 999
+    switches:
+      hosts:
+        10.30.10.100:
+
+  vars:
+    ansible_connections: network_cli
+    ansible_network_os: ios
+    ansible_user: dele
+    ansible_password: cisco
+    ntp_servers:
+      - 10.30.50.67
+      - 10.30.50.68
+    #The use of dashes above shows that we have an array
+
+       
